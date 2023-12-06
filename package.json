@@ -1,0 +1,41 @@
+{
+  "name": "web_univ",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "scripts": {
+    "build": "npm run css",
+    "css-compile": "sass --style compressed --source-map --embed-sources --load-path=assets/vendors assets/scss/style.scss:assets/css/style.css",
+    "css-lint": "stylelint assets/scss/",
+    "css-prefix": "postcss --replace assets/css/style.css --use autoprefixer --map",
+    "css": "npm-run-all css-compile css-prefix",
+    "server": "sirv --host --dev --no-clear --port 3000",
+    "start": "npm-run-all --parallel watch server",
+    "watch": "nodemon -e html,scss -x \"npm run css\"",
+    "test": "npm-run-all css-lint css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erdav544/web_univ.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erdav544/web_univ/issues"
+  },
+  "homepage": "https://github.com/erdav544/web_univ#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "nodemon": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.69.5",
+    "sirv-cli": "^2.0.2",
+    "stylelint": "^15.11.0",
+    "stylelint-config-twbs-bootstrap": "^11.0.1"
+  }
+}
