@@ -34,15 +34,15 @@ Table of contents
 
 // *** Default variable overrides
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  sm-mid: 640px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xl-mid: 1300px,
-  xxl: 1400px,
-  xxxl: 1800px
+    xs: 0,
+    sm: 576px,
+    sm-mid: 640px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xl-mid: 1300px,
+    xxl: 1400px,
+    xxxl: 1800px
 );
 
 // *** Bootstrap Stylesheets (including any separate color mode stylesheets)
@@ -96,18 +96,24 @@ $grid-breakpoints: (
     --font-poppins: 'Poppins', sans-serif;
     --font-nunito: 'Nunito', sans-serif;
 }
-html, body, header {
+
+html,
+body,
+header {
     //height: 100%;
     overflow-x: clip;
 
     // TODO: Don't use 100vh height if viewport height is more than 1080px
 }
+
 .bg-light {
     background-color: var(--light-color);
 }
+
 .box-shadow {
     box-shadow: var(--box-shadow);
 }
+
 .material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
@@ -150,15 +156,17 @@ html, body, header {
         border: 1px solid var(--light-color);
         opacity: 1;
         -webkit-animation: loader-spinner 800ms linear infinite;
-                animation: loader-spinner 800ms linear infinite;
+        animation: loader-spinner 800ms linear infinite;
     }
 }
+
 @-webkit-keyframes loader-spinner {
     to {
         transform: scale(1.5);
         opacity: 0;
     }
 }
+
 @keyframes loader-spinner {
     to {
         transform: scale(1.5);
@@ -175,12 +183,13 @@ html, body, header {
 .navbar {
     transition: background-color .35s, box-shadow .35s;
 
-    
+
 
     @include media-breakpoint-between(xs, xl) {
         background-color: var(--light-color);
     }
 }
+
 .navbar-nav {
     z-index: 1;
 
@@ -201,7 +210,7 @@ html, body, header {
             color: var(--primary-color);
             position: relative;
             font-family: var(--font-poppins);
-        
+
             &:hover {
                 &::after {
                     content: " ";
@@ -220,7 +229,7 @@ html, body, header {
                     }
                 }
             }
-            
+
             &::after {
                 content: " ";
                 left: 50%;
@@ -270,7 +279,7 @@ html, body, header {
                 }
             }
         }
-        
+
         /*
         &:nth-last-of-type(-n+2) {
             .nav-link {
@@ -313,6 +322,7 @@ html, body, header {
         }*/
     }
 }
+
 .navbar-cta {
     .box {
         width: 22rem;
@@ -350,7 +360,7 @@ html, body, header {
             box-shadow: none;
             background-color: rgba(254, 254, 254, 0.15);
             -webkit-backdrop-filter: blur(2.5px);
-                    backdrop-filter: blur(2.5px);
+            backdrop-filter: blur(2.5px);
         }
 
         &:not(:hover) {
@@ -432,7 +442,7 @@ header {
                 text-transform: uppercase;
                 max-width: 37.5rem;
 
-                > span {
+                >span {
                     color: var(--primary-color);
                 }
             }
@@ -445,6 +455,7 @@ header {
                 font-size: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
             }
         }
+
         .btn-cta {
             display: flex;
             justify-content: center;
@@ -505,8 +516,9 @@ header {
                 width: 100%;
             }
         }
+
         svg {
-            width:90.75rem;
+            width: 90.75rem;
             height: 90.75rem;
             /*max-height: 95vh;*/
             position: absolute;
@@ -537,13 +549,14 @@ header {
                 right: -20rem;
             }
         }
+
         img {
             width: 20rem;
             height: 34rem;
             -o-object-fit: cover;
-               object-fit: cover;
+            object-fit: cover;
             -o-object-position: top;
-               object-position: top;
+            object-position: top;
             position: absolute;
             right: 12rem;
             bottom: 0;
